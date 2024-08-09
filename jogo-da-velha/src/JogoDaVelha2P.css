@@ -1,0 +1,110 @@
+:root {
+    --O-color: #0000ff66;
+    --X-color: #ff000066;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    height: 100vh;
+    background-color: #eee;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 3rem;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 240px);
+    grid-template-rows: repeat(3, 200px);
+    gap: 1rem;
+  }
+  
+  .board.game-over {
+    opacity: 0.5;
+  }
+  
+  .cell {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #00000066;
+    cursor: pointer;
+  }
+  
+  .cell.O {
+    background-color: var(--O-color);
+  }
+  
+  .cell.X {
+    background-color: var(--X-color);
+  }
+  
+  .winner {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #555;
+    margin-top: 2rem;
+  }
+  
+  .item.X {
+    color: red; 
+  }
+  
+  .item.O {
+    color: blue; 
+  }
+  
+  @media (max-width: 768px) {
+    .board {
+      grid-template-columns: repeat(3, 160px);
+      grid-template-rows: repeat(3, 140px);
+    }
+  
+    .cell {
+      font-size: 2rem;
+    }
+  
+    .title {
+      font-size: 2rem;
+    }
+  
+    .winner {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .board {
+      grid-template-columns: repeat(3, 90px);
+      grid-template-rows: repeat(3, 70px);
+    }
+  
+    .cell {
+      font-size: 1.5rem;
+    }
+  
+    .title {
+      font-size: 1.5rem;
+    }
+  
+    .winner {
+      font-size: 1rem;
+    }
+  }

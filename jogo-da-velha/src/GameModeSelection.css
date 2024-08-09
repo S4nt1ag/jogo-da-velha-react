@@ -1,0 +1,82 @@
+.game-mode-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.game-mode-selection h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+}
+
+.button-game-selection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.game-mode-selection button {
+    width: 200px;
+    padding: 15px;
+    margin: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.game-mode-selection button:first-of-type {
+    background-color: #ff000099;
+}
+
+.game-mode-selection button:last-of-type {
+    background-color: #0000ff99;
+}
+
+@media (max-width: 768px) {
+    .game-mode-selection h1 {
+        font-size: 1.5em;
+    }
+
+    .game-mode-selection button {
+        width: 150px;
+        padding: 12px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-mode-selection h1 {
+        font-size: 1.2em;
+    }
+
+    .game-mode-selection button {
+        width: 120px;
+        padding: 10px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 320px) {
+    .game-mode-selection h1 {
+        font-size: 1em;
+    }
+
+    .game-mode-selection button {
+        width: 100px;
+        padding: 8px;
+        font-size: 0.8em;
+    }
+}
+
+.game-mode-selection button:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
